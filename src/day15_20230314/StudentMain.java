@@ -30,7 +30,7 @@ public class StudentMain {
 		studentMap.put(studentDTO1.getId(), studentDTO1);
 		//만약 똑같이 DTO,DTO2 가 입력된 값이 같다해도 equals 상 주소는 false
 		// DTO에 hashcode,equals 소스 입력시, true
-		//ㄴ(두가지의 값을 비교할 떼, 하나씩 각가 비교 필요하여 해당 코딩 진행)
+		//ㄴ(두가지의 값을 비교할때, 하나씩 각가 비교 필요하여 해당 코딩 진행)
 		
 		
 		

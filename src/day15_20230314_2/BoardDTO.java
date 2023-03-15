@@ -45,6 +45,12 @@ public class BoardDTO {
 	public void print() {
 		System.out.printf("%s\t%s\t%s\t%d\t%s\n",bno,title,writer,cnt,postDate);
 	}
+
+	@Override
+	public String toString() {
+		return "BoardDTO [bno=" + bno + ", title=" + title + ", writer=" + writer + ", cnt=" + cnt + ", postDate="
+				+ postDate + "]";
+	}
 	
 	
 	

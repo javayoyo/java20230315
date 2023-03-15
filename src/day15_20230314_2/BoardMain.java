@@ -8,6 +8,7 @@ public class BoardMain {
 		Scanner sc = new Scanner(System.in);
 		BoardService service = new BoardService();
 		
+		
 		while(true) {
 			System.out.println("=====게시판=====");
 			System.out.println("1.게시글등록 2.리스트 3.읽기 4.수정 5.삭제 0.종료");
