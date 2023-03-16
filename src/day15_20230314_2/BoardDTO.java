@@ -18,6 +18,12 @@ public class BoardDTO {
 		this.postDate = DTF.format(LocalDateTime.now());
 	}
 	
+	public BoardDTO(String updateTitle, String updateWriter) {
+		this.title = updateTitle;
+		this.writer = updateWriter;
+	}
+	
+	
 	public String getBno() {
 		return bno;
 	}

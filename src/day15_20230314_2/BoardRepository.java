@@ -1,10 +1,14 @@
 package day15_20230314_2;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 //풋으로 넣고 겟으로 가져오기
 public class BoardRepository {
+	
+	
 	Map<String, BoardDTO> bMap = new HashMap<>();
 
 	public boolean save(BoardDTO boardDTO) {
@@ -32,20 +36,6 @@ public class BoardRepository {
 		return null;
 	}
 	
-	
-	public  boolean delete(String bno) {
-		for(String b : bMap.keySet()) {	
-			if(bMap.get(b).getBno().equals(bno)) {
-				bMap.remove(b);
-				
-				return true;
-			}
-		}
-		return false;
-	}
-	
-
-
 	public boolean update(BoardDTO boardDTO, String bno) {
 		for(String b : bMap.keySet()) {
 			if(bMap.get(b).getBno().equals(bno)) {
@@ -67,6 +57,45 @@ public class BoardRepository {
 //		}
 //		return false;
 //	}	
+	
+	
+	public  boolean delete(String bno) {
+		for(String b : bMap.keySet()) {	
+			if(bMap.get(b).getBno().equals(bno)) {
+				bMap.remove(b);
+				
+				return true;
+			}
+		}
+		return false;
+	}
+
+//	public boolean updateNew(String bno, String updateTitle,
+//			String updateWriter) {
+//		
+//		for(BoardDTO b : list) {	
+//			if(b.getBno().equals(bno)) {
+//				b.setTitle(updateTitle);
+//				b.setWriter(updateWriter);
+//				
+//				return true;
+//			}
+//		}
+//		return false;
+//	
+//	}
+	
+	public List<BoardDTO> search(String writer) {
+		List<BoardDTO> list = new ArrayList<>();
+	for(String b : bMap.keySet()) {	
+		if(bMap.get(b).getWriter().equals(writer)) {
+			list.add(bMap.get(b));
+		}
+	}
+	return list;
+	}
+	
+
 	
 	
 	
