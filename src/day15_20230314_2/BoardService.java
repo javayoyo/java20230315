@@ -84,15 +84,15 @@ public class BoardService {
 
 	public void test() {
 
-		for (int i = 1; i < 6; i++) {  //5개까지 객체를 테스트 임의출력
-
+		for (int i = 1; i < 6; i++) {  //5개까지 객체를 테스트 출력
 			BoardDTO boardDTO = new BoardDTO();
 			
-			
 			boardDTO.setTitle("title" + i);
+			//ㄴ대신 String newTitle = "title" + i;
+			//ㄴ boardDTO.setTitle(newTitle); 작성가능
+			
 			boardDTO.setWriter("writer" + i);
 
-			
 			br.save(boardDTO);
 			// return boardDTO;
 
@@ -100,7 +100,6 @@ public class BoardService {
 		// return null;
 
 	}
-
 	public void search() {
 		System.out.println("작성자 검색 > ");
 		String writer = sc.next();
