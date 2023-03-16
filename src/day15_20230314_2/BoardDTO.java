@@ -48,8 +48,8 @@ public class BoardDTO {
 
 	@Override
 	public String toString() {
-		return "BoardDTO [bno=" + bno + ", title=" + title + ", writer=" + writer + ", cnt=" + cnt + ", postDate="
-				+ postDate + "]";
+		return "BoardDTO [bno=" + bno + ", title=" + title + ", writer=" + writer + ","
+				+ "cnt=" + cnt + ", postDate="+ postDate + "]";
 	}
 	
 	

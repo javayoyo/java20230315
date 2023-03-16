@@ -46,13 +46,13 @@ public class BoardRepository {
 	
 
 
-	public boolean update(boardDTO, String bno) {
+	public boolean update(BoardDTO boardDTO, String bno) {
 		for(String b : bMap.keySet()) {
 			if(bMap.get(b).getBno().equals(bno)) {
-				b.setTitle(b.getTitle());
-				b.setWriter(b.getWriter());
+				bMap.get(b).setTitle(boardDTO.getTitle());
+				bMap.get(b).setWriter(boardDTO.getWriter());
 				return true;
-			}
+			} 
 		}
 		return false;
 	}
